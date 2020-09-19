@@ -27,20 +27,26 @@
 - [ ] Set up Backup or GitHub sync (via some plugin)
 - [ ] Hide wp-admin page -
       https://www.3nions.com/hide-wp-admin-page-wordpress-login/
-- [x] Favicon
 
 ## General
 
+- [x] Favicon
 - [ ] Instagram and Facebook feed -- Currently shows up on a lot of pages, which
       is weird
   - [ ] Temporarily remove
   - [ ] Fix Instagram
   - [ ] Fix Facebook
   - [ ] Only put in Gallery section, not everywhere
+- [ ] Heading styles are weird
+  - [ ] H1 is tiny
+  - [ ] H2 should be larger
+  - [ ] H3 could be a bit smaller
 - [ ] Hamburger does not work on thin screen
 - [ ] Move logo into main header
 - [ ] Update quick links
 - [ ] Rearrange headers (navbar)
+- [ ] Remove tab sets and Darko plugin
+- [ ] Clean up (remove) draft pages
 
 ## Pages
 
@@ -58,8 +64,9 @@
 ### About Us
 
 - [x] Change descriptions of senators
-- [ ] Fix Interested in Joining VGSA section here:
+- [x] Fix Interested in Joining VGSA section here:
       <http://vgsa.usc.edu/role-senators/> (seems hard to change)
+- [ ] Update eligibility requirements for roles (Sebastian)
 - [ ] Make it clear that E-Board members are GSG senators
 - [ ] Update council members and senators with all their info
 - [ ] Merge "Current Council" and "Past Council"?
@@ -83,6 +90,10 @@
       policies
 
 ### Contact Us
+
+- [ ] Proper form
+- [ ] GitHub page
+- [ ] E-mail addresses
 
 ### Resources
 
