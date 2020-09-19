@@ -35,7 +35,7 @@
 - [x] (canceled) Unpublish all the nonessential pages, then slowly add it back
   - We should just keep things up.
 - [x] Favicon
-- [ ] Sharper favicon (current one is too small to distinguish)
+- [x] Sharper favicon (current one is too small to distinguish)
 - [x] (2020-09-19) Rearrange headers (navbar)
   - [x] (2020-09-19) Merge "About Us" with "Our Team" and "Resources"
 - [ ] Instagram and Facebook feed -- Currently shows up on a lot of pages, which
