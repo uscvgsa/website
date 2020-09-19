@@ -15,7 +15,6 @@
 * [Blog](#blog)
 * [Branding](#branding)
 * [External](#external)
-* [Defunct](#defunct)
 
 <!-- vim-markdown-toc -->
 
@@ -25,18 +24,26 @@
 - [x] Create GitHub repo for website notes
 - [ ] Figure out where the website is served
 - [ ] Set up Backup or GitHub sync (via some plugin)
+- [x] (canceled) Add
+      [WordPress GitHub Sync](https://wordpress.org/plugins/wp-github-sync/)
+  - This plugin does not work with organization repos
 - [ ] Hide wp-admin page -
       https://www.3nions.com/hide-wp-admin-page-wordpress-login/
 
 ## General
 
+- [x] (canceled) Unpublish all the nonessential pages, then slowly add it back
+  - We should just keep things up.
 - [x] Favicon
+- [ ] Sharper favicon (current one is too small to distinguish)
+- [x] (2020-09-19) Rearrange headers (navbar)
+  - [x] (2020-09-19) Merge "About Us" with "Our Team" and "Resources"
 - [ ] Instagram and Facebook feed -- Currently shows up on a lot of pages, which
       is weird
-  - [ ] Temporarily remove
+  - [x] (2020-09-19) Remove from pages (it looks awkward)
   - [ ] Fix Instagram
   - [ ] Fix Facebook
-  - [ ] Only put in Gallery section, not everywhere
+  - [ ] Only put these in Gallery section, not everywhere
 - [ ] Heading styles are weird
   - [ ] H1 is tiny
   - [ ] H2 should be larger
@@ -44,9 +51,13 @@
 - [ ] Hamburger does not work on thin screen
 - [ ] Move logo into main header
 - [ ] Update quick links
-- [ ] Rearrange headers (navbar)
 - [ ] Remove tab sets and Darko plugin
 - [ ] Clean up (remove) draft pages
+- [ ] Consider a move to a Jekyll + Bootstrap website
+  - We will have to make it super easy for non-coding users to use. The most
+    they should have to know is how to use Markdown; even better would be to
+    have them write things in Google Docs and have it automatically show up on
+    the website.
 
 ## Pages
 
@@ -64,7 +75,7 @@
 ### About Us
 
 - [x] Change descriptions of senators
-- [x] Fix Interested in Joining VGSA section here:
+- [x] (2020-09-18) Fix Interested in Joining VGSA section here:
       <http://vgsa.usc.edu/role-senators/> (seems hard to change)
 - [ ] Update eligibility requirements for roles (Sebastian)
 - [ ] Make it clear that E-Board members are GSG senators
@@ -73,7 +84,11 @@
 
 ### Events
 
+- [ ] Remove pages for Signature Events and Department Events
 - [ ] Switch to a Google Calendar that we update from time to time
+- [x] (canceled) Use a list of events on the Events page of the website rather
+      than a calendar
+  - We can use Google Calendar
 
 ### Gallery
 
@@ -91,9 +106,9 @@
 
 ### Contact Us
 
-- [ ] Proper form
-- [ ] GitHub page
+- [ ] Remove form
 - [ ] E-mail addresses
+- [ ] GitHub page
 
 ### Resources
 
@@ -113,15 +128,3 @@
 
 - [ ] Fix description on
       [Wikipedia](<https://en.wikipedia.org/wiki/USC_Viterbi_School_of_Engineering#Viterbi_Graduate_Students_Association_(VGSA)>)
-
-## Defunct
-
-_Do not implement_
-
-- [ ] Add [WordPress GitHub Sync](https://wordpress.org/plugins/wp-github-sync/)
-  - This plugin does not work with organization repos
-- [ ] Unpublish all the nonessential pages, then slowly add it back
-  - We should just keep things up.
-- [ ] Use a list of events on the Events page of the website rather than a
-      calendar
-  - We can use Google Calendar
