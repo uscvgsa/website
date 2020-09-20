@@ -94,6 +94,8 @@
 
 - [x] (2020-09-20) Make the Instagram feed the main feature of this page, since
       that is what we update
+- [x] (2020-09-20) Fix the Instagram feed display
+  - [x] (2020-09-20) Make it span the full page -> Changed the layout
 - [ ] Figure out what to do with the Gallery Tab set
 
 ### Funding
