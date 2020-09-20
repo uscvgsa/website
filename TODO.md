@@ -41,9 +41,9 @@
 - [ ] Instagram and Facebook feed -- Currently shows up on a lot of pages, which
       is weird
   - [x] (2020-09-19) Remove from pages (it looks awkward)
-  - [ ] Fix Instagram
+  - [x] (2020-09-20) Fix Instagram
   - [ ] Fix Facebook
-  - [ ] Only put these in Gallery section, not everywhere
+  - [x] (2020-09-20) Only put these in Gallery section, not everywhere
 - [ ] Heading styles are weird
   - [ ] H1 is tiny
   - [ ] H2 should be larger
@@ -92,8 +92,9 @@
 
 ### Gallery
 
-- [ ] Make the Instagram feed the main feature of this page, since that is what
-      we update
+- [x] (2020-09-20) Make the Instagram feed the main feature of this page, since
+      that is what we update
+- [ ] Figure out what to do with the Gallery Tab set
 
 ### Funding
 
