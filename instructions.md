@@ -7,7 +7,9 @@ Instructions for various tasks.
 We use the [Instagram Feed plugin](https://smashballoon.com/instagram-feed/) by
 Smash Balloon. See the settings under "Instagram Feed" on the left navigation
 panel. To insert the Instagram feed into a page, add the widget text
-`[instagram-feed]`.
+`[instagram-feed]`. Something interesting we noticed was that without the
+`Load initial posts with AJAX,` setting, the Instagram images were very weird --
+some of them extended to 2x their length. Thus, we keep this setting on.
 
 ## Facebook Feed
 
