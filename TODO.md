@@ -38,11 +38,12 @@
 - [x] Sharper favicon (current one is too small to distinguish)
 - [x] (2020-09-19) Rearrange headers (navbar)
   - [x] (2020-09-19) Merge "About Us" with "Our Team" and "Resources"
-- [ ] Instagram and Facebook feed -- Currently shows up on a lot of pages, which
+- [x] Instagram and Facebook feed -- Currently shows up on a lot of pages, which
       is weird
   - [x] (2020-09-19) Remove from pages (it looks awkward)
   - [x] (2020-09-20) Fix Instagram
-  - [ ] Fix Facebook
+  - [x] (canceled) Fix Facebook -> Remove entirely since it is the same as
+        Instagram
   - [x] (2020-09-20) Only put these in Gallery section, not everywhere
 - [ ] Heading styles are weird
   - [ ] H1 is tiny
