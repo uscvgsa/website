@@ -59,6 +59,7 @@
     they should have to know is how to use Markdown; even better would be to
     have them write things in Google Docs and have it automatically show up on
     the website.
+- [ ] Clean unused plugins
 
 ## Pages
 
@@ -79,9 +80,16 @@
 - [x] (2020-09-18) Fix Interested in Joining VGSA section here:
       <http://vgsa.usc.edu/role-senators/> (seems hard to change)
 - [ ] Update eligibility requirements for roles (Sebastian)
-- [ ] Make it clear that E-Board members are GSG senators
-- [ ] Update council members and senators with all their info
-- [ ] Merge "Current Council" and "Past Council"?
+- [x] (canceled) Make it clear that E-Board members are GSG senators
+- [x] (2020-09-20) Update council members and senators with all their info
+  - [ ] Qihong Wang is missing info
+  - [ ] Nitin Perumandla is missing info
+  - [ ] Mohammad Saeed Abrishami is missing info
+  - [ ] Kranthi Nuthalapati is missing info
+  - [ ] Katy Felkner is missing info
+- [ ] Change old council to have consistent style?
+  - Lots of work, and the only return is aesthetics
+- [x] (canceled) Merge "Current Council" and "Past Council"?
 
 ### Events
 
