@@ -14,6 +14,7 @@
   * [Resources](#resources)
 * [Blog](#blog)
 * [Branding](#branding)
+* [Switching Tech Stacks](#switching-tech-stacks)
 * [External](#external)
 
 <!-- vim-markdown-toc -->
@@ -45,13 +46,15 @@
   - [x] (canceled) Fix Facebook -> Remove entirely since it is the same as
         Instagram
   - [x] (2020-09-20) Only put these in Gallery section, not everywhere
+- [x] (canceled) Hamburger does not work on thin screen
+  - Actually, it does :D
 - [ ] Heading styles are weird
   - [ ] H1 is tiny
   - [ ] H2 should be larger
   - [ ] H3 could be a bit smaller
-- [ ] Hamburger does not work on thin screen
 - [ ] Move logo into main header
-- [ ] Update quick links
+- [x] (2020-09-28) Update quick links
+  - Done by culling pages -- the quick links just link to all pages on the site
 - [ ] Remove tab sets and Darko plugin
 - [ ] Clean up (remove) draft pages
 - [ ] Consider a move to a Jekyll + Bootstrap website
@@ -62,6 +65,8 @@
 - [ ] Clean unused plugins
 
 ## Pages
+
+- [x] (2020-09-28) Review all pages and cull unneeded ones
 
 ### Home
 
@@ -82,22 +87,28 @@
 - [ ] Update eligibility requirements for roles (Sebastian)
 - [x] (canceled) Make it clear that E-Board members are GSG senators
 - [x] (2020-09-20) Update council members and senators with all their info
-  - [ ] Qihong Wang is missing info
-  - [ ] Nitin Perumandla is missing info
+  - [x] Qihong Wang is missing info
+  - [x] Nitin Perumandla is missing info
   - [ ] Mohammad Saeed Abrishami is missing info
-  - [ ] Kranthi Nuthalapati is missing info
-  - [ ] Katy Felkner is missing info
-- [ ] Change old council to have consistent style?
+  - [x] Kranthi Nuthalapati is missing info
+  - [x] Katy Felkner is missing info
+- [x] (canceled) Change old council to have consistent style?
   - Lots of work, and the only return is aesthetics
 - [x] (canceled) Merge "Current Council" and "Past Council"?
+- [ ] Update VGSA documents
 
 ### Events
 
-- [ ] Remove pages for Signature Events and Department Events
-- [ ] Switch to a Google Calendar that we update from time to time
+- [x] (2020-09-28) Remove pages for Signature Events and Department Events
+- [x] (2020-09-28) Switch Events to a Google Calendar that we update from time to time
+  - [ ] Style the calendar, perhaps with a plugin?
 - [x] (canceled) Use a list of events on the Events page of the website rather
       than a calendar
   - We can use Google Calendar
+- [ ] SoCal GPS page
+  - [ ] Put at /socal-gps
+  - [ ] Brainstorm things to put on page
+  - [ ] See [here](https://www.calpolypomonapds.com) for inspiration
 
 ### Gallery
 
@@ -106,6 +117,7 @@
 - [x] (2020-09-20) Fix the Instagram feed display
   - [x] (2020-09-20) Make it span the full page -> Changed the layout
 - [ ] Figure out what to do with the Gallery Tab set
+  - [ ] Remove the Photo Gallery plugin?
 
 ### Funding
 
@@ -124,6 +136,8 @@
 
 ### Resources
 
+- [ ] Add section for DEN students?
+
 ## Blog
 
 - [ ] Recap of summer activities
@@ -135,6 +149,14 @@
 
 - [x] Experiment with new logo -> See [logo directory](logo/drafts.svg)
 - [ ] Play around with more red in the logo
+
+## Switching Tech Stacks
+
+- [ ] Analyze advantages and disadvantages of a move to a technology like Jekyll
+      or React or Angular
+- [ ] Figure out where we would host the site
+- [ ] Jekyll - select a template or build from scratch
+  - Integrating Bootstrap?
 
 ## External
 

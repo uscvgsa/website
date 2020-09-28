@@ -16,3 +16,8 @@ some of them extended to 2x their length. Thus, we keep this setting on.
 Currently, we do not have the Facebook Feed on the website, but in the past, we
 used the [Facebook Feed plugin](https://smashballoon.com/custom-facebook-feed/)
 by Smash Balloon.
+
+## Google Calendar
+
+To add the Google Calendar to the website, we simply use an embed code. See
+[here](https://support.google.com/calendar/answer/41207) for more info.
