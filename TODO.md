@@ -15,6 +15,7 @@
 * [Blog](#blog)
 * [Branding](#branding)
 * [Switching Tech Stacks](#switching-tech-stacks)
+* [Redesign](#redesign)
 * [External](#external)
 
 <!-- vim-markdown-toc -->
@@ -48,6 +49,7 @@
   - [x] (2020-09-20) Only put these in Gallery section, not everywhere
 - [x] (canceled) Hamburger does not work on thin screen
   - Actually, it does :D
+- [x] (2020-10-04) Optimize pictures with resmush.it plugin
 - [ ] Heading styles are weird
   - [ ] H1 is tiny
   - [ ] H2 should be larger
@@ -57,11 +59,6 @@
   - Done by culling pages -- the quick links just link to all pages on the site
 - [ ] Remove tab sets and Darko plugin
 - [ ] Clean up (remove) draft pages
-- [ ] Consider a move to a Jekyll + Bootstrap website
-  - We will have to make it super easy for non-coding users to use. The most
-    they should have to know is how to use Markdown; even better would be to
-    have them write things in Google Docs and have it automatically show up on
-    the website.
 - [ ] Clean unused plugins
 
 ## Pages
@@ -100,15 +97,33 @@
 ### Events
 
 - [x] (2020-09-28) Remove pages for Signature Events and Department Events
-- [x] (2020-09-28) Switch Events to a Google Calendar that we update from time to time
+- [x] (2020-09-28) Switch Events to a Google Calendar that we update from time
+      to time
   - [ ] Style the calendar, perhaps with a plugin?
 - [x] (canceled) Use a list of events on the Events page of the website rather
       than a calendar
   - We can use Google Calendar
 - [ ] SoCal GPS page
-  - [ ] Put at /socal-gps
-  - [ ] Brainstorm things to put on page
-  - [ ] See [here](https://www.calpolypomonapds.com) for inspiration
+  - [x] (2020-10-04) Put at /socal-gps
+  - [x] (2020-10-04) Details
+  - [x] (2020-10-04) Schedule
+  - [x] (2020-10-04) Speakers
+  - [x] (2020-10-10) Re-title "Speakers" to "Workshop Speakers"
+  - [x] (2020-10-11) Panelists
+  - [x] (2020-10-11) More speakers
+  - [x] (2020-10-11) Add workshops to the speakers
+  - [x] (canceled) Sponsors
+  - [x] (2020-10-11) Add event descriptions -- popup / click?
+    - Having the description underneath each event would be perfect
+  - [x] (2020-10-11) Add panelists to the table
+  - [x] (2020-10-11) Cut down speaker descriptions -- strip down or make a
+        pop-up
+    - [x] (canceled) Try to link to the speakers so you can click the link and
+          go down to them
+  - [ ] (blocked) Add Zoom link to the panel
+  - [x] (canceled) Check if popups can be added
+  - [ ] Finish by Monday
+  - [x] See [here](https://www.calpolypomonapds.com) for inspiration
 
 ### Gallery
 
@@ -157,6 +172,15 @@
 - [ ] Figure out where we would host the site
 - [ ] Jekyll - select a template or build from scratch
   - Integrating Bootstrap?
+
+## Redesign
+
+- [ ] Consider a move to a Jekyll + Material website
+  - We will have to make it super easy for non-coding users to use. The most
+    they should have to know is how to use Markdown; even better would be to
+    have them write things in Google Docs and have it automatically show up on
+    the website.
+- [ ] Write a design doc
 
 ## External
 
