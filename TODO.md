@@ -103,7 +103,7 @@
 - [x] (canceled) Use a list of events on the Events page of the website rather
       than a calendar
   - We can use Google Calendar
-- [ ] SoCal GPS page
+- [x] SoCal GPS page
   - [x] (2020-10-04) Put at /socal-gps
   - [x] (2020-10-04) Details
   - [x] (2020-10-04) Schedule
@@ -120,9 +120,9 @@
         pop-up
     - [x] (canceled) Try to link to the speakers so you can click the link and
           go down to them
-  - [ ] (blocked) Add Zoom link to the panel
+  - [x] (2020-10-11) Add Zoom link to the panel
   - [x] (canceled) Check if popups can be added
-  - [ ] Finish by Monday
+  - [x] (2020-10-11) Finish by Monday
   - [x] See [here](https://www.calpolypomonapds.com) for inspiration
 
 ### Gallery
