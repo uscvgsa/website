@@ -2,37 +2,33 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [Infrastructure](#infrastructure)
-* [General](#general)
-* [Pages](#pages)
-  * [Home](#home)
-  * [About Us](#about-us)
-  * [Events](#events)
-  * [Gallery](#gallery)
-  * [Funding](#funding)
-  * [Contact Us](#contact-us)
-  * [Resources](#resources)
-* [Blog](#blog)
-* [Branding](#branding)
-* [Switching Tech Stacks](#switching-tech-stacks)
-* [Redesign](#redesign)
-* [External](#external)
+* [Old Site](#old-site)
+  * [Infrastructure](#infrastructure)
+  * [General](#general)
+  * [Pages](#pages)
+    * [Home](#home)
+    * [About Us](#about-us)
+    * [Events](#events)
+    * [Gallery](#gallery)
+    * [Funding](#funding)
+    * [Contact Us](#contact-us)
+    * [Resources](#resources)
+  * [Blog](#blog)
+* [New Site](#new-site)
 
 <!-- vim-markdown-toc -->
 
-## Infrastructure
+## Old Site
+
+### Infrastructure
 
 - [x] Create a team GitHub
 - [x] Create GitHub repo for website notes
-- [ ] Figure out where the website is served
-- [ ] Set up Backup or GitHub sync (via some plugin)
 - [x] (canceled) Add
       [WordPress GitHub Sync](https://wordpress.org/plugins/wp-github-sync/)
   - This plugin does not work with organization repos
-- [ ] Hide wp-admin page -
-      https://www.3nions.com/hide-wp-admin-page-wordpress-login/
 
-## General
+### General
 
 - [x] (canceled) Unpublish all the nonessential pages, then slowly add it back
   - We should just keep things up.
@@ -61,11 +57,11 @@
 - [ ] Clean up (remove) draft pages
 - [ ] Clean unused plugins
 
-## Pages
+### Pages
 
 - [x] (2020-09-28) Review all pages and cull unneeded ones
 
-### Home
+#### Home
 
 - [x] Move contact form somewhere else?
   - Removed, just see "Contact Us" page
@@ -73,10 +69,10 @@
   - Removed
 - [x] Events?
   - Link is still good; now fix the events page itself
-- [ ] Find new pictures (current ones outdated)
+- [x] Find new pictures (current ones outdated)
 - [ ] Put blog posts instead of just images (solves above)
 
-### About Us
+#### About Us
 
 - [x] Change descriptions of senators
 - [x] (2020-09-18) Fix Interested in Joining VGSA section here:
@@ -94,7 +90,7 @@
 - [x] (canceled) Merge "Current Council" and "Past Council"?
 - [ ] Update VGSA documents
 
-### Events
+#### Events
 
 - [x] (2020-09-28) Remove pages for Signature Events and Department Events
 - [x] (2020-09-28) Switch Events to a Google Calendar that we update from time
@@ -125,7 +121,7 @@
   - [x] (2020-10-11) Finish by Monday
   - [x] See [here](https://www.calpolypomonapds.com) for inspiration
 
-### Gallery
+#### Gallery
 
 - [x] (2020-09-20) Make the Instagram feed the main feature of this page, since
       that is what we update
@@ -134,7 +130,7 @@
 - [ ] Figure out what to do with the Gallery Tab set
   - [ ] Remove the Photo Gallery plugin?
 
-### Funding
+#### Funding
 
 - [x] Move Funding Request page from Resources to Events tab, "Events Funding"
 - [x] Move the Funding Policies content from the document to the page
@@ -143,46 +139,25 @@
 - [x] Remove list of USC Approved Vendors, and replace with link to GSG funding
       policies
 
-### Contact Us
+#### Contact Us
 
 - [ ] Remove form
 - [ ] E-mail addresses
 - [ ] GitHub page
 
-### Resources
+#### Resources
 
-- [ ] Add section for DEN students?
+- [ ] Add section for DEN students
 
-## Blog
+### Blog
 
 - [ ] Recap of summer activities
 - [ ] Weekly posts
 - [ ] First council meeting
-- [ ] How Bryon got involved in VGSA in his first year
+- [ ] How X got involved in VGSA in his first year
+- [ ] Event recaps
+- [ ] A week in the life of X senator
+- [ ] Random tips about various VGSA-related things -- how to succeed in grad
+      school, etc.
 
-## Branding
-
-- [x] Experiment with new logo -> See [logo directory](logo/drafts.svg)
-- [ ] Play around with more red in the logo
-
-## Switching Tech Stacks
-
-- [ ] Analyze advantages and disadvantages of a move to a technology like Jekyll
-      or React or Angular
-- [ ] Figure out where we would host the site
-- [ ] Jekyll - select a template or build from scratch
-  - Integrating Bootstrap?
-
-## Redesign
-
-- [ ] Consider a move to a Jekyll + Material website
-  - We will have to make it super easy for non-coding users to use. The most
-    they should have to know is how to use Markdown; even better would be to
-    have them write things in Google Docs and have it automatically show up on
-    the website.
-- [ ] Write a design doc
-
-## External
-
-- [ ] Fix description on
-      [Wikipedia](<https://en.wikipedia.org/wiki/USC_Viterbi_School_of_Engineering#Viterbi_Graduate_Students_Association_(VGSA)>)
+## New Site
