@@ -1,6 +1,6 @@
 # USC VGSA Website
 
-Netlify Status: (TODO)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d308e357-eb36-4fb2-83ce-4fab01195619/deploy-status)](https://app.netlify.com/sites/uscvgsa/deploys)
 
 Source code for an [Eleventy](https://www.11ty.dev/) website hosted on Netlify
 at <https://uscvgsa.netlify.app>.
