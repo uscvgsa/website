@@ -1,0 +1,32 @@
+<div class="container-fluid bg-dark text-white font-weight-bold py-3">
+  <div class="row">
+    <div class="col-12 text-center pb-1" style="font-size: 1.75rem">
+      {%- if siteInfo.social.facebook -%}
+      <a class="footer__social-link" href="{{ siteInfo.social.facebook }}" title="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      {%- endif -%}
+
+      {%- if siteInfo.social.instagram -%}
+      <a class="footer__social-link" href="{{ siteInfo.social.instagram }}" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      {%- endif -%}
+
+      {%- if siteInfo.social.linkedin -%}
+      <a class="footer__social-link" href="{{ siteInfo.social.linkedin }}" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      {%- endif -%}
+
+      {%- if siteInfo.social.github -%}
+      <a class="footer__social-link" href="{{ siteInfo.social.github }}" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      {%- endif -%}
+    </div>
+    <div class="col-12 text-center">
+      &#169; {{ siteInfo.author }} {{ siteInfo.year }}
+    </div>
+  </div>
+</div>

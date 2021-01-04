@@ -1,10 +1,12 @@
 /* prettier-ignore */
 @import
-  "variables",
-  "fonts",
-  "common",
-  "animations",
+  "bootstrap",
 
-  "layouts/default",
-  "layouts/title"
+  "includes/cover",
+  "includes/footer",
+  "includes/navbar"
 ;
+
+::selection {
+  background-color: rgba(#c0c0c0, 0.5);
+}

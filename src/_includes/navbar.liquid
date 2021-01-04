@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg fixed-top py-3 text-uppercase font-weight-bold navbar__starting">
+  <a class="navbar-brand" href="/">
+    {{- siteInfo.name -}}
+  </a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    {%- assign active_url = page.url | url -%}
+    <ul class="navbar-nav ml-auto">
+      {%- for entry in navbar.entries -%}
+        {%- if entry.url -%}
+
+          {%- comment -%}Add a single entry.{%- endcomment -%}
+          {%- assign entry_url = entry.url | url -%}
+          <li class="nav-item {% if entry_url == active_url %}active{% endif %}">
+            <a class="nav-link px-lg-3 {% if entry_url == active_url %}active{% endif %}" href="{{ entry_url }}">
+              {{- entry.name -}}
+              {%- if entry_url == active_url -%}
+              <span class="sr-only">(current)</span>
+              {%- endif -%}
+            </a>
+          </li>
+
+        {%- else -%}
+
+          {%- comment -%}Add a list of entries for a dropdown.{%- endcomment -%}
+
+          {%- comment -%}Determine if any entry in this dropdown is active.{%- endcomment -%}
+          {%- assign dropdown_is_active = false -%}
+          {%- for child in entry.children -%}
+            {%- assign child_url = child.url | url -%}
+            {%- if child_url == active_url -%}
+              {%- assign dropdown_is_active = true -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link px-lg-3 dropdown-toggle {% if dropdown_is_active == true %}active{% endif %}"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              {{ entry.name }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {%- for child in entry.children -%}
+              {%- assign child_url = child.url | url -%}
+              <a class="dropdown-item {% if child_url == active_url %}font-weight-bold{% endif %}" href="{{ child_url }}">
+                {{- child.name -}}
+              </a>
+              {%- endfor -%}
+            </div>
+          </li>
+
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+</nav>
