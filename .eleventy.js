@@ -1,5 +1,6 @@
 // Configuration for Eleventy.
 
+const cheerio = require("cheerio");
 const fs = require("fs");
 const htmlmin = require("html-minifier");
 const path = require("path");
@@ -11,6 +12,10 @@ module.exports = function (eleventyConfig) {
   // Don't use the gitignore because it will ignore src/compiled-assets.
   eleventyConfig.setUseGitIgnore(false);
 
+  // Merge array and object data like `tags` instead of overwriting.
+  eleventyConfig.setDataDeepMerge(true);
+
+  // Copy static files.
   staticFiles = ["robots.txt", "favicon.ico", "imgs/", "favicon/"];
   for (const file of staticFiles) {
     eleventyConfig.addPassthroughCopy(path.join(inputDir, file));
@@ -24,16 +29,83 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/compiled-assets": "assets" });
 
   // Markdown parsing with markdown-it.
-  const markdownIt = require("markdown-it");
-  const markdownItKatex = require("@iktakahiro/markdown-it-katex");
-  const options = {
+  const markdownLib = require("markdown-it")({
     html: true,
-  };
-  const markdownLib = markdownIt(options).use(markdownItKatex);
+    xhtmlOut: false,
+    linkify: true,
+    typographer: true,
+  })
+    .use(require("@iktakahiro/markdown-it-katex"))
+    .use(require("markdown-it-center-text"))
+    .use(require("markdown-it-anchor"), {
+      level: 2,
+      permalink: true,
+      permalinkBefore: false,
+      permalinkSymbol: "¶",
+      permalinkClass: "permalink", // Style in index.liquid
+    })
+    .use(require("markdown-it-toc-done-right"), {
+      level: 2,
+      listType: "ul",
+      containerClass: "l-body",
+    })
+    .use(require("markdown-it-implicit-figures"), {
+      figcaption: true,
+      link: true,
+    });
   eleventyConfig.setLibrary("md", markdownLib);
+
+  // Syntax highlighting.
+  eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
+
+  // RSS.
+  eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-rss"));
+
+  //
+  // Shortcodes.
+  //
+
+  // Clipboard button using clipboard.js.
+  // Usage: Make sure clipboard.js is included on the page and initialized (this
+  // is done in _includes/scripts.liquid). Then, add {% clipboard %} before the
+  // text to be copied and add {% endclipboard %} after the text to be copied.
+  let clipboardId = 0;
+  eleventyConfig.addPairedShortcode("clipboard", function (content) {
+    const id = `clipboard-${clipboardId}`;
+    ++clipboardId;
+    return `
+<div class="relative">
+  <div id="${id}">
+    ${content}
+  </div>
+  <button class="clipboard group transition cursor-pointer flex items-center
+                 absolute right-0 top-0 p-2
+                 text-xs text-gray-400 hover:text-white focus:text-white
+                 hover:bg-gray-800 hover:bg-opacity-50
+                 focus:bg-gray-800 focus:bg-opacity-50 focus:outline-none"
+          data-clipboard-target="#${id}">
+      <span class="pr-2 hidden group-hover:inline-block group-focus:hidden">
+        Copy
+      </span>
+      <span class="pr-2 hidden group-hover:hidden group-focus:inline-block">
+        Copied!
+      </span>
+      <span class="material-icons">content_copy</span>
+  </button>
+</div>`;
+  });
 
   // Minify HTML.
   if (process.env.ELEVENTY_ENV === "production") {
+    eleventyConfig.addTransform("lazy-imgs", (content, outputPath) => {
+      if (outputPath.endsWith(".html")) {
+        const article = cheerio.load(content);
+        article("img").attr("loading", "lazy");
+        return article.html();
+      }
+      return content;
+    });
+
     eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
       if (outputPath.endsWith(".html")) {
         const minified = htmlmin.minify(content, {
@@ -42,6 +114,7 @@ module.exports = function (eleventyConfig) {
           removeComments: true,
           sortClassName: true,
           useShortDoctype: true,
+          minifyCSS: true, // Minifying JS does not seem to work very well.
         });
         return minified;
       }
@@ -51,7 +124,7 @@ module.exports = function (eleventyConfig) {
 
   // BrowserSync settings.
   eleventyConfig.setBrowserSyncConfig({
-    port: 8000,
+    port: 3000,
     open: "local",
     online: false,
     localOnly: true,
@@ -65,9 +138,9 @@ module.exports = function (eleventyConfig) {
     // See https://www.11ty.dev/docs/quicktips/not-found/
     callbacks: {
       ready: function (err, bs) {
-        const content404 = fs.readFileSync("build/404.html");
         bs.addMiddleware("*", (req, res) => {
           // Provides the 404 content without redirect.
+          const content404 = fs.readFileSync("build/404.html");
           res.write(content404);
           res.end();
         });
@@ -82,5 +155,11 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       layouts: "_layouts",
     },
+    markdownTemplateEngine: "liquid",
+
+    // Using /dev in development helps catch instances where we depend on assets
+    // to be hosted at / (in these cases, we should be using Eleventy's "url"
+    // Liquid filter.
+    pathPrefix: process.env.ELEVENTY_ENV === "development" ? "/dev" : "/",
   };
 };

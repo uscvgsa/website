@@ -15,12 +15,16 @@ npm install
 
 ### Development Server
 
-This will serve the website at <https://localhost:8000> and reload changes to
-source files:
+This will serve the website at <https://localhost:3000/dev> and reload changes
+to source files:
 
 ```bash
 npm start
 ```
+
+Note: Though the dev site is built at `/dev`, the actual site is built with `/`.
+Using `/dev` helps catch instances where we depend on the site being hosted at
+`/` (e.g. assets with the wrong link).
 
 ### Command Reference
 
@@ -65,8 +69,24 @@ Refer to `package.json` for a complete list of dependencies.
 
 ## Features
 
-- Add `katex: true` in the front matter to turn on Katex styling (JS rendering
-  is done at build time)
+### Global
+
+- `katex: true` - Turn on Katex styling (JS rendering is done at build time)
+- The `clipboard` shortcode adds a clipboard button to an element such as a code
+  block; for example, in Liquid, use
+  ```liquid
+  {% clipboard %}
+  {% highlight python %}
+  ...
+  {% endhighlight %}
+  {% endclipboard %}
+  ```
+
+### Articles
+
+- `cover: true` - Add a "hero" at the top of the page
+- `cover_img: URL` - Add an image to the background of the cover. `cover: true`
+  must also be passed in.
 
 ## Manifest
 

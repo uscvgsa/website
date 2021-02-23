@@ -1,12 +1,59 @@
-/* prettier-ignore */
-@import
-  "bootstrap",
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  "includes/cover",
-  "includes/footer",
-  "includes/navbar"
-;
+@import "prism-material-dark";
+
+//
+// Base styles.
+//
+
+@layer base {
+  a {
+    @apply text-red-700 hover:text-red-500;
+  }
+  pre {
+    @apply text-sm;
+  }
+}
+
+//
+// Scrollbar and selection.
+//
 
 ::selection {
   background-color: rgba(#c0c0c0, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+//
+// Page-specific styles included here because HTML is not processed by PostCSS.
+//
+
+.__index__ {
+  h2 {
+    @apply text-3xl sm:text-3xl text-black font-bold uppercase pb-7;
+  }
+
+  a.header-link {
+    @apply flex justify-center items-center shadow mx-1 bg-primary hover:bg-primary-dark text-black;
+  }
+
+  div.feature {
+    @apply px-4 pt-10 pb-8;
+  }
+  div.feature-content {
+    @apply mx-auto max-w-screen-xl;
+  }
+}
+
+.__article__ {
+  // Global settings for articles. Particularly useful because we cannot
+  // directly apply styles in markdown.
+  a.permalink {
+    @apply no-underline font-normal;
+  }
 }

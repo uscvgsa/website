@@ -1,0 +1,90 @@
+---
+layout: default.liquid
+title: VGSA
+description: Viterbi Graduate Student Association
+changeFreq: weekly
+---
+
+<div class="__index__">
+  <div class="block bg-black bg-center bg-no-repeat bg-cover bg-fixed"
+       style="background-image: url({{"imgs/group-photo-2020.jpg" | url}});">
+    <div class="py-40 px-5 bg-black bg-opacity-30">
+      <p class="mx-auto w-full max-w-lg
+                text-primary text-9xl font-bold text-center">
+        {{- title -}}
+      </p>
+      <p class="text-2xl mb-4 font-bold text-primary text-center">
+        {{- description -}}
+      </p>
+      <div class="flex flex-wrap justify-center mx-auto">
+        <a href="#events"
+           title="Upcoming events"
+           class="header-link uppercase font-bold text-xl h-12 w-5/6 sm:w-36 rounded-full mb-2.5">
+          Events
+        </a>
+        <a href="{{ "/blog" | url }}"
+           title="Visit our blog!"
+           class="header-link uppercase font-bold text-xl h-12 w-5/6 sm:w-36 rounded-full mb-2.5">
+          Blog
+        </a>
+      </div>
+      <div class="flex flex-wrap justify-center mx-auto">
+        {%- for s in config.social -%}
+          <a href="{{- s.url | url -}}"
+             title="{{- s.name -}}"
+             class="header-link h-12 w-12 rounded-full text-2xl">
+            <i class="{{ s.fa }} mx-auto"></i>
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white feature" id="events">
+    <div class="feature-content md:flex md:items-center">
+      <div class="md:w-1/3 mb-4 md:pr-6">
+        <h2>Events</h2>
+        <p>
+          Coming Soon!
+        </p>
+      </div>
+      <div class="md:w-2/3 flex">
+        <p>
+          Coming Soon!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-100 feature" id="events">
+    <div class="feature-content md:flex md:items-center">
+      <div class="md:w-1/2 mb-4 md:pr-6">
+        <h2>Title</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+      </div>
+      <div class="md:w-1/2 flex">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

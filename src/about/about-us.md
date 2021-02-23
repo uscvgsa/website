@@ -1,7 +1,7 @@
 ---
-layout: default.liquid
+layout: article.liquid
 title: About Us
-tagline: At your service!
+description: At your service!
 ---
 
 Welcome to the USC Viterbi School of Engineering (VSOE). We, the Viterbi
